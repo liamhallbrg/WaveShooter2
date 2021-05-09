@@ -1,0 +1,26 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (SFMLengine.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  CApp.cpp
+C:\Users\0203liha\source\repos\WaveShooter2\SFMLengine\CApp.cpp(22,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  CBullet.cpp
+  CGame.cpp
+C:\Users\0203liha\source\repos\WaveShooter2\SFMLengine\CGame.cpp(93,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\0203liha\source\repos\WaveShooter2\SFMLengine\CGame.cpp(103,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\0203liha\source\repos\WaveShooter2\SFMLengine\CGame.cpp(106,23): warning C4018: '<': signed/unsigned mismatch
+  CGameMap.cpp
+C:\Users\0203liha\source\repos\WaveShooter2\SFMLengine\CGameMap.cpp(12,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\0203liha\source\repos\WaveShooter2\SFMLengine\CGameMap.cpp(12,20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\0203liha\source\repos\WaveShooter2\SFMLengine\CGameMap.cpp(13,33): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\0203liha\source\repos\WaveShooter2\SFMLengine\CGameMap.cpp(13,29): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  CPlayer.cpp
+  IEnemy.cpp
+  IEntity.cpp
+  Generating Code...
+  SFMLengine.vcxproj -> C:\Users\0203liha\source\repos\WaveShooter2\Debug\WaveShooter2.exe
