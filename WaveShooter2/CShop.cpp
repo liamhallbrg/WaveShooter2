@@ -26,10 +26,15 @@ void CShop::update()
 		//text
 		m_tBuyShotgunAmmo = m_pGame->getGUI()->createText(0, 0, "tBuySGAmmo");
 		m_tBuyShotgunAmmo->setFontSize(8);
+
 		m_tBuySMGAmmo = m_pGame->getGUI()->createText(0, 0, "tBuySMGAmmo");
 		m_tBuySMGAmmo->setFontSize(8);
+
 		m_tBuyHealthkit = m_pGame->getGUI()->createText(0, 0, "tBuyHealthkit");
 		m_tBuyHealthkit->setFontSize(8);
+
+		m_tBuyWall = m_pGame->getGUI()->createText(0, 0, "tBuyWall");
+		m_tBuyWall->setFontSize(8);
 	}
 
 
@@ -53,12 +58,16 @@ void CShop::update()
 	m_tBuyShotgunAmmo->setString("[Shotgun-$" + std::to_string(m_shopCost[EG_SHOTGUN]) + "]");
 
 	//buy smg
-	m_tBuySMGAmmo->setPosition(m_backgroundPos.x + 90, m_backgroundPos.y + 5);
+	m_tBuySMGAmmo->setPosition(m_backgroundPos.x + 80, m_backgroundPos.y + 5);
 	m_tBuySMGAmmo->setString("[SMG-$" + std::to_string(m_shopCost[EG_SMG]) + "]");
 
 	//buy health
-	m_tBuyHealthkit->setPosition(m_backgroundPos.x + 150, m_backgroundPos.y + 5);
-	m_tBuyHealthkit->setString("[Healthkit-$100]");
+	m_tBuyHealthkit->setPosition(m_backgroundPos.x + 130, m_backgroundPos.y + 5);
+	m_tBuyHealthkit->setString("[Health-$100]");
+
+	//buy m_tBuyWall
+	m_tBuyWall->setPosition(m_backgroundPos.x + 200, m_backgroundPos.y + 5);
+	m_tBuyWall->setString("[Wall-$100]");
 
 	if (m_tBuyShotgunAmmo->getBounds().contains(m_pGame->getApp()->getMousePosWorld()))
 	{
@@ -77,6 +86,12 @@ void CShop::update()
 		m_shopItemHighlightPos = sf::Vector2f(m_tBuyHealthkit->getBounds().left, m_tBuyHealthkit->getBounds().top);
 		m_shopItemHighlight.setSize(sf::Vector2f(m_tBuyHealthkit->getBounds().width, m_tBuyHealthkit->getBounds().height));
 		m_currentHover = EG_HEALTH;
+	}
+	else if (m_tBuyHealthkit->getBounds().contains(m_pGame->getApp()->getMousePosWorld()))
+	{
+		m_shopItemHighlightPos = sf::Vector2f(m_tBuyWall->getBounds().left, m_tBuyWall->getBounds().top);
+		m_shopItemHighlight.setSize(sf::Vector2f(m_tBuyWall->getBounds().width, m_tBuyWall->getBounds().height));
+		m_currentHover = EG_WALL;
 	}
 	else
 	{

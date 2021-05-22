@@ -17,8 +17,8 @@ private:
 
 	bool m_isShopVisable;
 	bool m_createText;
-	int m_shopCost[4]{ 0,100,50,100 };
-	int m_addAmmoAmount[3]{ 0,8,25 };
+	int m_shopCost[5]{ 0,100,50,100, 100 };
+	int m_addAmmoAmount[4]{ 0,8,25, 2 };
 	int m_currentHover;
 	double m_buyDelay;
 
@@ -26,6 +26,7 @@ private:
 	CText* m_tBuyShotgunAmmo;
 	CText* m_tBuySMGAmmo;
 	CText* m_tBuyHealthkit;
+	CText* m_tBuyWall;
 
 public:
 	CShop();

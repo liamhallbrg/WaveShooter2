@@ -247,6 +247,7 @@ void IEnemy::onWallCollision(sf::FloatRect wall)
 
 void CEnemyStandard::enemyLevel()
 {
+
 	if (m_randomLevel <= 55)
 	{
 		m_randomLevel = 0;
@@ -267,6 +268,7 @@ void CEnemyStandard::enemyLevel()
 	{
 		m_randomLevel = 4;
 	}
+
 
 
 

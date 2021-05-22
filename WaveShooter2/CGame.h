@@ -13,7 +13,8 @@ enum EquippedGun
 	EG_PISTOL,
 	EG_SHOTGUN,
 	EG_SMG,
-	EG_HEALTH
+	EG_HEALTH,
+	EG_WALL
 };
 
 
@@ -57,7 +58,7 @@ private:
 	int m_enemyNumber;
 	int m_enemyWaveSpawnCounter;
 	int m_money;
-	int m_ammo[3]{ 1,10,10 };
+	int m_ammo[4]{ 1,1000,1000,1000 };
 	bool m_waveActive;
 	bool m_isInsideShop;
 

@@ -68,7 +68,7 @@ void CStatBar::update()
 	//equippedGun
 	m_tEquippedGun->setPosition(m_hudPos.x + 1, m_hudPos.y + 10);
 	if(m_pGame->getEquippedGun()== EG_PISTOL)
-		m_tEquippedGun->setString("Pistol: " + std::to_string(m_pGame->getCurrentAmmo(EG_PISTOL)));
+		m_tEquippedGun->setString("Pistol: Unlimited");
 
 	else if (m_pGame->getEquippedGun() == EG_SHOTGUN)
 		m_tEquippedGun->setString("Shotgun: " + std::to_string(m_pGame->getCurrentAmmo(EG_SHOTGUN)));
